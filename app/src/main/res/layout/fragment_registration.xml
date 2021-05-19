@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Регистрация"
+        android:textColor="@color/colorPink"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNameRegistration"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:elevation="7dp"
+        android:hint="Имя"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRegistration" />
+
+    <EditText
+        android:id="@+id/edtSurnameRegistration"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:elevation="7dp"
+        android:hint="Фамилия"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtNameRegistration" />
+
+    <TextView
+        android:id="@+id/txtDateRegistration"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_edit_text"
+        android:elevation="7dp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:hint="Дата рождения"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorGray"
+        app:drawableEndCompat="@drawable/ic_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtSurnameRegistration" />
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/edtPhoneRegistration"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:elevation="7dp"
+        android:hint="Номер телефона "
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDateRegistration"
+        app:mask="8 (___) ___ __ __"
+        app:maskCharacter="_"
+        app:maskStyle="completable" />
+
+    <EditText
+        android:id="@+id/edtPasswordRegistration"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:elevation="7dp"
+        android:hint="Пароль"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPhoneRegistration"
+        android:inputType="textPassword"/>
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGray"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/edtPasswordRegistration"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:text="Прикрепите фотографии документа удостоверяющий вашу личность с обеих сторон"
+
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPhoto"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/imgUdLichDriverConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop" />
+
+
+                <ImageView
+                    android:id="@+id/imgUdLichBackDriverConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop" />
+
+            </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/imgConfirmPassport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline3"
+                    android:src="@drawable/ic_8"
+                    android:visibility="visible"
+                    app:tint="@color/colorGray" />
+
+                <ImageView
+                    android:id="@+id/imgConfirmPassport2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_8"
+                    android:visibility="visible"
+                    app:tint="@color/colorGray" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnRegistration"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Зарегистрироваться"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardPhoto" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

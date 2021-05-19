@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imgBackToolbar"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_back"
+        android:padding="17dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Мои пездки"
+        app:layout_constraintTop_toTopOf="@id/imgBackToolbar"
+        app:layout_constraintStart_toEndOf="@id/imgBackToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/imgBackToolbar"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/colorPink"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txtFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/imgBackToolbar"
+        app:layout_constraintTop_toBottomOf="@id/imgBackToolbar"
+        android:layout_marginTop="30dp"
+        android:text="Almaty"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/txtFrom"
+        app:layout_constraintTop_toTopOf="@id/txtFrom"
+        app:layout_constraintBottom_toBottomOf="@id/txtFrom"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_train"/>
+
+    <TextView
+        android:id="@+id/txtTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/img"
+        app:layout_constraintTop_toBottomOf="@id/imgBackToolbar"
+        android:layout_marginTop="30dp"
+        android:text="Astana"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/txtFrom"
+        app:layout_constraintTop_toBottomOf="@id/txtFrom"
+        android:layout_marginTop="15dp"
+        android:text="Devon Lane"
+        android:textColor="#7292A9"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/txtFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="14.03.2021"
+        android:layout_marginEnd="35dp"
+        android:textColor="@color/colorGray" />
+
+    <ImageView
+        android:id="@+id/imgBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtDate"
+        app:layout_constraintEnd_toEndOf="@id/txtDate"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_box_icon"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/imgBox"
+        app:layout_constraintBottom_toBottomOf="@id/imgBox"
+        app:layout_constraintEnd_toStartOf="@id/imgBox"
+        android:layout_marginEnd="5dp"
+        android:textColor="#C48D69"
+        android:text="5 kg"/>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/txtName"
+        app:layout_constraintStart_toStartOf="@id/txtName"
+        app:layout_constraintEnd_toEndOf="@id/imgBox"
+        android:alpha="0.15"
+        android:background="@color/colorGray"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

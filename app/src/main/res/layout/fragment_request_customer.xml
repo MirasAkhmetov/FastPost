@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/txtRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorPink"
+        android:text="Оставить заявку для отправки посылки"
+        android:drawableEnd="@drawable/ic_post"
+        android:drawablePadding="5dp"
+        />
+
+    <EditText
+        android:id="@+id/edtFromRequest"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRequest"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="Откуда"
+        android:elevation="7dp"/>
+
+    <EditText
+        android:id="@+id/edtToRequest"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtFromRequest"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:hint="Куда"
+        android:elevation="7dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <TextView
+        android:id="@+id/txtDateRequest"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        android:background="@drawable/background_edit_text"
+        android:elevation="7dp"
+        android:hint="Дата"
+        android:fontFamily="@font/fira_sans_regular"
+        android:paddingStart="25dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorGray"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtToRequest"
+        app:drawableEndCompat="@drawable/ic_date" />
+
+    <TextView
+        android:id="@+id/txtVolumeRequest"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        android:background="@drawable/background_edit_text"
+        android:elevation="7dp"
+        android:hint="Объем"
+        android:fontFamily="@font/fira_sans_regular"
+        android:paddingStart="25dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorGray"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/edtToRequest"
+        app:drawableEndCompat="@drawable/ic_box_icon_gray" />
+
+    <TextView
+        android:id="@+id/txtTransportRequest"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        android:background="@drawable/background_edit_text"
+        android:elevation="7dp"
+        android:hint="Транспорт"
+        android:fontFamily="@font/fira_sans_regular"
+        android:paddingStart="25dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorGray"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDateRequest"
+        app:drawableEndCompat="@drawable/ic_transport" />
+
+    <EditText
+        android:id="@+id/edtPriceRequest"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edt_height"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtVolumeRequest"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:hint="Цена"
+        android:elevation="7dp"
+        android:drawableEnd="@drawable/ic_tenge"/>
+
+    <EditText
+        android:id="@+id/edtDescriptionRequest"
+        android:layout_width="0dp"
+        android:layout_height="145dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTransportRequest"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/background_text_view"
+        android:gravity="start"
+        android:paddingTop="15dp"
+        android:elevation="7dp"
+        android:hint="Описание, примечания"/>
+
+    <Button
+        android:id="@+id/btnRequestCustomer"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btn_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtDescriptionRequest"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="25dp"
+        android:text="Оставить заявку"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
